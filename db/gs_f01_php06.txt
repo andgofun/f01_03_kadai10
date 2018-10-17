@@ -1,0 +1,21 @@
+mysql -u root
+
+use gs_f01_php06
+
+
+create database gs_f01_php06
+
+
+
+grant all on gs_f01_php06.* to dbuser@localhost identified by '';
+
+create table todos(
+    id int not null auto_increment primary key,
+    state tinyint(1) default 0, /* 0:not finished */
+    title text
+);
+
+insert into todos (state, title) values
+(0, 'todo 0'),
+(0, 'todo 1'),
+(0, 'todo 2');
